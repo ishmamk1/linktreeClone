@@ -1,0 +1,43 @@
+/* Form styles */
+.add-link-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-link-form .input-field {
+  display: block;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 300px;
+}
+
+.add-link-form .button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #F0F2F5;
+  border: none;
+  border-radius: 5px;
+  color: #212121;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.add-link-form .button:hover {
+  background-color: #ECEFF1;
+}
+
+.add-link-form .button:focus {
+  outline: none;
+}
+
+body {
+  background-color: #0000FF; /* Grey background color */
+}
+
