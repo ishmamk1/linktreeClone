@@ -1,17 +1,54 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="static/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="static/css/addLink.css">
-    <title>Linktree</title>
-    {% block head %} {% endblock %}
-</head>
-<body>
-    {% block body %} {% endblock %}
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdn.tailwindcss.com"></script>
+            <link rel="stylesheet" href="static/css/addLink.css">
+        <title>Linktree</title>
+        {% block head %} {% endblock %}
+    </head>
+    <body>
+        <nav class="py-6 px-6 flex justify-between items-center border-b border-gray-200">
+            <a href="/" >
+                <img src="/static/Linktree-Emblem-transformed.png" alt="Image Button">
+            </a>
+            {% if current_user.is_authenticated %}
+            <div class="space-x-6">
+                <a href="{{ url_for('links', username=current_user.username) }}" class="px-6 py-3 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">View</a>
+                <a href="{{ url_for('index') }}" class="px-6 py-3 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">Dashboard</a>
+                <a href="{{ url_for('logout') }}" class="px-6 py-3 text-med font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Log Out</a>
+            </div>
+            {% else %}
+            <div class="space-x-6">
+                    <a href="{{ url_for('signup') }}" class="px-6 py-3 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">Sign Up</a>
+                    <a href="{{ url_for('login') }}" class="px-4 py-3 text-med font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Login</a>
+                {% endif %}
+            </div>
+
+        </nav>
+
+
+
+        {% block body %} {% endblock %}
+    </body>
+    <footer class="py-6 px-6 flex justify-between bg-gray-800">
+    <div class="w-2/3 pr-10">
+        <h3 class="mb-5 font-semibold text-gray-100">Linktree</h3>
+        <p class="text-med text-gray-100">Ishmam Khan</p>
+    </div>
+    <div class="w-1/3">
+        <h3 class="mb-5 font-semibold text-white">Menu</h3>
+        <ul class="space-y-2">
+            <li><a href="{{ url_for('about') }}" class="text-med text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">About</a></li>
+            <li><a href="{{ url_for('contact') }}" class="text-med text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">Contact</a></li>
+            <li><a href="{{ url_for('tos') }}" class="text-med text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out">Terms Of Use</a></li>
+        </ul>
+    </div>
+</footer>
+
 </html>

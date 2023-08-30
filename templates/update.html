@@ -6,76 +6,35 @@
 <link rel="stylesheet" href="static/css/addLink.css">
 <style>
     body {
-            background-color: #ffffff;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.4;
-            color: #212121;
-        }
-
-    .add-link-form .button {
-      display: inline-block;
-      padding: 10px 20px;
-      background-color: #536DFE;
-      border: none;
-      border-radius: 5px;
-      color: #FFFFFF;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .add-link-form .button:hover {
-      background-color: #3D5AFE;
-    }
-
-    .add-link-form .button:focus {
-      outline: none;
-    }
-
-    .input-field {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #E0E0E0;
-    border-radius: 5px;
-    font-size: 14px;
-    }
-
-    .bottom-center {
-              position: absolute;
-              bottom: 0;
-            }
-
-            .container {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: flex-end;
-              height: 100%;
-              padding-bottom: 20px;
-            }
- </style>
+    background: linear-gradient(to bottom right, #FDFD96, #96FFC7);
+    color: #2E3A59;
+}
+</style>
 {% endblock %}
 
 
 {% block body %}
+
 <center>
-    <br>
-    </br>
-    <br>
-<h1>Update Link</h1>
-    <br>
-    <h6>Update your links below with the name included.</h6>
-    <br>
-    <form method="POST" class="add-link-form" action="/update/{{ link[0] }}">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="url">URL:</label>
-        <input type="text" id="url" name="url" required ><br><br>
-        <input type="submit" value="Update" class="button">
+    <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
+    <h1 class="mb-6 text-3xl">Update</h1>
+    <form method="post" action="/update/{{ link[0] }}">
+
+        <div class="mb-3">
+            <label class="inline-block mb-2">Name:</label><br>
+            <input type="text" name="name" id="name" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-block mb-2">URL:</label><br>
+            <input type="text" id="url" name="url" required>
+        </div>
+        <br>
+
+
+        <button class="py-3 px-6 text-lg bg-blue-600 hover:bg-blue-800 rounded-xl text-white" type="submit">Submit</button>
     </form>
+</div>
     <div class="container">
     <img src="{{ url_for('static', filename='Linktree-Emblem.png') }}" style="height: 60px;" class="bottom-center">
     </div>
