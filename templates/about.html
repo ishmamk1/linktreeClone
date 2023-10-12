@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+        body {
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #FFFFE0, #FFB6C1);
+        }
+
+        .header {
+            background: linear-gradient(to bottom, #FFFFE0, #FFB6C1);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="header">
+        <h1>About Us</h1>
+    </div>
+    <br>
+    <div class="container">
+        <div class="content">
+            <p>Welcome to our Linktree clone!</p>
+            <br>
+            <p>Our platform allows you to share all of your important links in one place,
+            making it easier for your audience to connect with you across various social media platforms.</p>
+            <br>
+
+            <p>Whether you're an influencer, content creator, or business owner, our Linktree clone provides a convenient
+                way to showcase your online presence. </p>
+            <br>
+            <p>Customize your links, add a profile picture, and share your unique link
+            with your followers.</p>
+            <br>
+
+            <p>We're here to help you make the most out of your online presence and provide a seamless experience for you and your audience.</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="footer">
+        <p>&copy; 2023 Linktree Clone. All rights reserved.</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+body {
+    background: linear-gradient(to bottom right, #FFB6C1, #FFD700);
+    color: #2E3A59;
+}
+
+
+</style>
+{% endblock %}
+{% block body %}
+<center>
+<div class="w-1/2 my-6 mx-auto p-6 bg-gray-200 rounded-xl">
+    <h1 class="mb-6 text-3xl">Sign-Up</h1>
+    {% if error_message %}
+        <p style="color: red;">{{ error_message }}</p>
+    {% endif %}
+    <form method="post" action="/signup">
+
+        <div class="mb-3">
+            <label class="inline-block mb-2">Username</label><br>
+            <input type="username" id="username" name="username" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-block mb-2">Email</label><br>
+            <input type="email" id="email" name="email" required><br>
+        </div>
+
+        <div class="mb-3">
+            <label class="inline-block mb-2">Password</label><br>
+            <input type="password" id="password" name="password" required><br>
+        </div>
+
+
+
+        <button class="py-4 px-8 text-lg bg-blue-600 hover:bg-blue-800 rounded-xl text-white" type="submit">Submit</button>
+    </form>
+    <br>
+    <h2 class="form-title">Already a user? <a href="/login">Log in</a> below:</h2>
+</div>
+        <br>
+    <br>
+        <br>
+    <br>
+</center>
+{% endblock%}

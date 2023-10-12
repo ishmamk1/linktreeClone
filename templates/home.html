@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="static/css/home.css">
+<style>
+body {
+    background: linear-gradient(to bottom right, #FDFD96, #96FFC7);
+    color: #2E3A59;
+}
+
+</style>
+{% endblock %}
+{% block body %}
+<div class="flex">
+    <div class="left-content">
+    <img src="{{ url_for('static', filename='Linktree-Emblem.png') }}" style="height: 250px;" >
+
+        {% if current_user.is_authenticated %}
+            <div class="space-x-6">
+                <a href="{{ url_for('links', username=current_user.username) }}" class="px-6 py-3 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">View</a>
+                <a href="{{ url_for('index') }}" class="px-6 py-3 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">Dashboard</a>
+            </div>
+        {% else %}
+
+        <div class="space-x-6">
+            <a href="{{ url_for('signup') }}" class="px-8 py-4 text-med font-semibold bg-blue-600 text-white rounded-xl hover:bg-blue-800">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="px-8 py-4 text-med font-semibold bg-gray-500 text-white rounded-xl hover:bg-gray-700">Login</a>
+        </div>
+        {% endif %}
+            </div>
+
+<div class="right-content">
+<div class="iphone">
+  <div class="screen"></div>
+    <div class="icons">
+      <img src="/static/IMG_8399.png" alt="Profile Picture" class="circular-profile-pic" style="margin-top: 20px;">
+    </div>
+    <div class="icons">
+      <div class="app"></div>
+
+    </div>
+      <div class="icons">
+      <div class="app_2_row"></div>
+
+    </div>
+      <div class="icons">
+      <div class="app_3_row"></div>
+    </div>
+      <div class="icons">
+      <div class="app_4_row"></div>
+
+    </div>
+  <div class="notch">
+    <div class="camera"></div>
+    <div class="speaker"></div>
+  </div>
+</div>
+</div>
+</div>
+
+{% endblock %}

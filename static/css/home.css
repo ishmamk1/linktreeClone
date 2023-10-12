@@ -1,0 +1,188 @@
+html,body {
+  height:100%;
+}
+
+.iphone {
+  margin:auto;
+  border:10px solid black;
+  border-radius:40px;
+  width:295px;
+  height:590px;
+  position:relative;
+  box-shadow:0px 20px 15px #33333335;
+  background: linear-gradient(to bottom right, #FFB6C1, #FFD700);
+}
+.notch {
+  z-index:50;
+  top:0;
+  left:62px;
+  position:absolute;
+  background:#000000;
+  width:150px;
+  height:30px;
+  border-radius:0px 0px 20px 20px;
+}
+.screen {
+  z-index:10;
+  position:absolute;
+  background:url("images/background.jpg");
+  background-size:cover;
+  width:100%;
+  height:100%;
+  border-radius:30px;
+  background-color: linear-gradient(to bottom right, #F23650, #FFFFFF);
+}
+.icons {
+  margin-top:30px;
+  justify-content:center;
+  display:flex;
+}
+.icons div{
+  margin:10px;
+  z-index:100;
+  background:white;
+  width:1000px;
+  height:45px;
+  border-radius:15px;
+  box-shadow:0px 5px 5px #33333340;
+  cursor:pointer;
+  transition: transform 400ms ease-in-out;
+}
+
+.linkIcons {
+  margin-top:40px;
+  justify-content:center;
+  display:flex;
+}
+.linkIcons div{
+  margin:10px;
+  z-index:100;
+  background:white;
+  width:45px;
+  height:45px;
+  border-radius:15px;
+  box-shadow:0px 5px 5px #33333340;
+  cursor:pointer;
+  transition: transform 400ms ease-in-out;
+}
+.app:nth-child(1) {
+  background:url("images/netflix.jpeg");
+  background-size:cover;
+  background-color: #536DFE;
+}
+.app:nth-child(2) {
+  background:url("images/hbo-max.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.app:nth-child(3) {
+  background:url("images/yes.jpg");
+  background-size:cover;
+}
+.app:nth-child(4) {
+  background:url("images/apple-tv.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.app_2_row:nth-child(1) {
+  background:url("images/ebay.jpg");
+  background-size:cover;
+  background-position:center;
+  background-color: #536DFE
+}
+.app_2_row:nth-child(2) {
+  background:url("images/aliexpress.png");
+  background-size:cover;
+  background-position:center;
+}
+.app_2_row:nth-child(3) {
+  background:url("images/amazon.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.app_2_row:nth-child(4) {
+  background:url("images/wish.png");
+  background-size:cover;
+  background-position:center;
+}
+.app_3_row:nth-child(1) {
+  background:url("images/coc.jpeg");
+  background-size:cover;
+  background-color: #536DFE;
+}
+.app_3_row:nth-child(2) {
+  background:url("images/candy-crush.jpeg");
+  background-size:cover;
+}
+.app_3_row:nth-child(3) {
+  background:url("images/poker.jpg");
+  background-size:cover;
+}
+.app_3_row:nth-child(4) {
+  background:url("images/cod.png");
+  background-size:cover;
+}
+.app_4_row:nth-child(1) {
+  background:url("images/facebook.png");
+  background-size:cover;
+  background-color: #536DFE;
+}
+.app_4_row:nth-child(2) {
+  background:url("images/messenger.svg");
+  background-size:cover;
+}
+.app_4_row:nth-child(3) {
+  background:url("images/whatsapp.png");
+  background-size:cover;
+}
+.app_4_row:nth-child(4) {
+  background:url("images/instagram.jpg");
+  background-size:cover;
+  background-position:center;
+}
+.icons div:hover{
+  transform:scale(0.8);
+}
+.camera{
+  position: absolute;
+    bottom: 8px;
+    right: 20px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: .2rem solid #1e1f22;
+    background: #447bb5a6;
+}
+.speaker{
+  position: absolute;
+    right: 3.5rem;
+    width: 3.0rem;
+    height: .6rem;
+    background: #333;
+    border-radius: .2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.left-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 70px;
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-content {
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
